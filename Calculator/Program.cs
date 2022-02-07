@@ -18,9 +18,18 @@ namespace Calculator
             string uzen = "A művelet eredménye: ";
 
             // Beolvasások
-            szam1 = int.Parse(Console.ReadLine());
-            szam2 = int.Parse(Console.ReadLine());
+            //szam1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Adjon meg egy számot");
+            szam1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Adjon meg műveleti jelet");
             muvjel = Convert.ToChar(Console.Read());
+            Console.ReadLine(); // Billentyűzet puffer ürítése
+
+            Console.WriteLine("Adjon meg egy másik számot");
+            szam2 = Convert.ToInt32(Console.ReadLine());
+
+            //szam2 = int.Parse(Console.ReadLine());
 
             switch (muvjel)
             {
