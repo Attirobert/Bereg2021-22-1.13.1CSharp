@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kopapollo", "kopapollo\kopapollo.csproj", "{107BFA7A-AFF8-49CF-8249-4D9CB8E9C06E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szamkitalalo", "Szamkitalalo\Szamkitalalo.csproj", "{C1DEE4F6-ACBB-4618-9459-9FE2C7C2355B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{107BFA7A-AFF8-49CF-8249-4D9CB8E9C06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{107BFA7A-AFF8-49CF-8249-4D9CB8E9C06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{107BFA7A-AFF8-49CF-8249-4D9CB8E9C06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1DEE4F6-ACBB-4618-9459-9FE2C7C2355B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1DEE4F6-ACBB-4618-9459-9FE2C7C2355B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1DEE4F6-ACBB-4618-9459-9FE2C7C2355B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1DEE4F6-ACBB-4618-9459-9FE2C7C2355B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
