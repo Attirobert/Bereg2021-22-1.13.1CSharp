@@ -12,8 +12,10 @@ namespace Szamkitalalo
         {
             // Változók
             int alsoHatar = 1,  // Véletlenszám alsó határa
-                felsoHatar = 101,   // Véletlenszám felső határa + 1
+                felsoHatar = 11,   // Véletlenszám felső határa + 1
                 gondoltSzam,
+                tippAlsoHatar,
+                tippFelsoHatar,
                 tipp,
                 probal = 5; // A próbálkozások maximális száma
 
@@ -23,7 +25,7 @@ namespace Szamkitalalo
             do
             {
                 // Megkérdezem, hogy ki lesz a kitaláló
-                Console.WriteLine("Leszelaz, aki gondol egy számra? (i /n)");
+                Console.WriteLine("Leszel az, aki gondol egy számra? (i /n)");
                 if (Console.ReadKey().KeyChar == 'n')
                 {
                     // Ha játékos a kitaláló
@@ -34,25 +36,54 @@ namespace Szamkitalalo
                     for (int i = 0; i <= probal; i++)
                     {
                         // Beolvasom a tippet
+                        Console.WriteLine("\nTippeljen! ");
                         tipp = int.Parse(Console.ReadLine());
                         // Kiértékelem a tippet
-
-                        // Ha nagyobb a tipp
-
-                        // Ha kisebb a tipp
-
-                        // Eltalálta
+                        if (gondoltSzam < tipp) // Ha nagyobb a tipp
+                        {
+                            Console.WriteLine("Kisebb számra gondoltam");
+                        }else if(gondoltSzam > tipp)    // Ha kisebb a tipp
+                        {
+                            Console.WriteLine("Nagyobb számra gondoltam");
+                        }
+                        else      // Eltalálta
+                        {
+                            Console.WriteLine("Gratulálok, eltalálta");
+                            break;
+                        }
                     }
                 }
-                else
+                else    // Ha a gép a kitaláló
                 {
-                    // Ha a gép a kitaláló
+
                     // A gép max probal értékig tippel
-                    // A gép tippjének meghatározása
+                    for (int i = 0; i <= probal; i++)
+                    {
+                        // A gép tippjének meghatározása
+
+                        Console.WriteLine("\nTippeljen! ");
+                        tipp = int.Parse(Console.ReadLine());
+                        // Kiértékelem a tippet
+                        if (gondoltSzam < tipp) // Ha nagyobb a tipp
+                        {
+                            Console.WriteLine("Kisebb számra gondoltam");
+                        }
+                        else if (gondoltSzam > tipp)    // Ha kisebb a tipp
+                        {
+                            Console.WriteLine("Nagyobb számra gondoltam");
+                        }
+                        else      // Eltalálta
+                        {
+                            Console.WriteLine("Gratulálok, eltalálta");
+                            break;
+                        }
+                    }
+
+                    
                     // A játékos megadja a kiértékelést
                 }
 
-                Console.WriteLine("Folytatjuk a játékot? (i/n)");
+                Console.WriteLine("\nFolytatjuk a játékot? (i/n)");
             } while (Console.ReadKey().KeyChar == 'i');
             // Eof Játék ismétlése
             Console.ReadKey();
