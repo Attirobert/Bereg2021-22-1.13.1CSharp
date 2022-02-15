@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kopapollo", "kopapollo\kopa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szamkitalalo", "Szamkitalalo\Szamkitalalo.csproj", "{C1DEE4F6-ACBB-4618-9459-9FE2C7C2355B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teszt", "Teszt\Teszt.csproj", "{3FABD5F7-65FF-443B-837D-C47DEAB52AB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C1DEE4F6-ACBB-4618-9459-9FE2C7C2355B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1DEE4F6-ACBB-4618-9459-9FE2C7C2355B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1DEE4F6-ACBB-4618-9459-9FE2C7C2355B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FABD5F7-65FF-443B-837D-C47DEAB52AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FABD5F7-65FF-443B-837D-C47DEAB52AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FABD5F7-65FF-443B-837D-C47DEAB52AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FABD5F7-65FF-443B-837D-C47DEAB52AB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

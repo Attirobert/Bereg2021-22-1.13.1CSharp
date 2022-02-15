@@ -67,29 +67,29 @@ namespace Szamkitalalo
                     tippFelsoHatar = felsoHatar;
 
                     // A gép max probal értékig tippel
+                    Console.WriteLine("\nGondolj egy számra! ");
                     for (int i = 0; i <= probal; i++)
                     {
                         // A gép tippjének meghatározása
-                        Console.WriteLine("\nGondolj egy számra! ");
-                        tipp = (tippFelsoHatar - tippAlsoHatar) / 2;
-                        Console.WriteLine("Az én tippem: {0}", tipp);
+                        tipp = tippAlsoHatar + (tippFelsoHatar - tippAlsoHatar) / 2;
+                        Console.WriteLine("Az én (gép) tippem: {0}  \nA játékos válasza (n: nagyobbra gondoltam; k: kisebbre gondoltam; t: eltalálta", tipp);
 
                         // Kiértékelem a tippet, megadom a választ
                         valaszom = Console.ReadKey().KeyChar;
                         if (valaszom == 'n')
                         {
-                            Console.WriteLine("Nagyobbra gondoltam!");
+                            Console.WriteLine("\nNagyobbra gondoltam!");
                             tippAlsoHatar = tipp;
                         }
                         else if (valaszom == 'k')
                         {
-                            Console.WriteLine("Kisebbre gondoltam!");
+                            Console.WriteLine("\nKisebbre gondoltam!");
                             tippFelsoHatar = tipp;
                         }
                         else
                         {
                             eltalalta = true;
-                            Console.WriteLine("Gratulálok, eltalálta!");
+                            Console.WriteLine("\nGratulálok, eltalálta!");
                             break;
                         }
                     }
@@ -97,9 +97,8 @@ namespace Szamkitalalo
                     // Ha nem találta el, akkor ezt írom ki
                     if (!eltalalta)
                     {
-                        Console.WriteLine("Lejárt a tippek száma, de sajnos nem találta el!");
+                        Console.WriteLine("\nLejárt a tippek száma, de sajnos nem találta el!");
                     }
-                    Console.ReadKey();
                 }
 
                 Console.WriteLine("\nFolytatjuk a játékot? (i/n)");
