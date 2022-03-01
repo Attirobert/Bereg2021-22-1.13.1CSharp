@@ -13,6 +13,7 @@ namespace Classes
         private string fajta;
         private string szin;
         private int kor;
+        protected string hang;
 
         public Allat(string nev, string fajta, string szin)
         {
@@ -29,21 +30,10 @@ namespace Classes
             this.kor = 0;
         }
 
-        public void setNev(string p)
-        {
-            this.nev = p;
-        }
+        public void setNev(string p){this.nev = p;}
+        public string getNev(){return this.nev;}
 
-        public string getNev()
-        {
-            return this.nev;
-        }
-
-        public int getKor()
-        {
-            return this.kor;
-        }
-
+        public int getKor(){return this.kor;}
         public void setKor(int p)
         {
             if (p > 0 && p < 50)
@@ -52,27 +42,40 @@ namespace Classes
             }
         }
 
-        public void setFajta(string p)
+        public void setFajta(string p){this.fajta = p;}
+        public string getFajta() {return this.fajta;}
+
+        public void setSzin(string p){this.szin = p;}
+        public string getSzin(){return this.szin;}
+
+        public string hangotAd()
         {
-            this.fajta = p;
+            return this.hang;
         }
 
-        public string getFajta()
+    }
+
+    class Kutya : Allat
+    {
+        // Osztályváltozó
+        private string gazda;
+
+        public Kutya(string nev, string fajta, string szin) : base(nev, fajta, szin)
         {
-            return this.fajta;
+            this.gazda = "ismeretlen";
+            this.hang = "vau vau";
         }
 
-
-        public void setSzin(string p)
+        public void setGazda(string p) { this.gazda = p; }
+        public string getGazda() { return this.gazda; }
+    }
+    
+    class Macska : Allat
+    {
+        public Macska(string nev, string fajta, string szin) : base(nev, fajta, szin)
         {
-            this.szin = p;
+            this.hang = "miau miau";
         }
-
-        public string getSzin()
-        {
-            return this.szin;
-        }
-
     }
 
     class Program
@@ -88,12 +91,30 @@ namespace Classes
             Console.WriteLine("\nAz állat2 neve: {0}", allat2.getNev());
 
             Allat allat3 = new Allat();
+            Console.WriteLine("\nAz állat3 neve: {0}, " +
+    "\nkora {1} év \nfajtája: {2} \nszíne: {3}", allat3.getNev(), allat3.getKor(), allat3.getFajta(), allat3.getSzin());
+
             allat3.setNev("Vadász");
             allat3.setFajta("Agár");
             allat3.setSzin("barna");
             allat3.setKor(5);
-            Console.WriteLine("\nAz állat1 neve: {0}, kora {1} év", allat1.getNev(), allat1.getKor());
+            Console.WriteLine("\nAz állat3 neve: {0}, " +
+                "\nkora {1} év \nfajtája: {2} \nszíne: {3}", allat3.getNev(), allat3.getKor(), allat3.getFajta(), allat3.getSzin());
 
+            Console.WriteLine("\nAz állat3 hangja: {0}", allat3.hangotAd());
+            Console.WriteLine("\n============== Származtatott ==================\n");
+            Kutya kutya1 = new Kutya("Bogár", "puli", "fekete");
+            kutya1.setKor(6);
+            kutya1.setGazda("Pista bá");
+            Console.WriteLine("\nA kutya1 neve: {0}, " +
+                "\nkora {1} év \nfajtája: {2} \nszíne: {3}\ngazdája: {4}", kutya1.getNev(), kutya1.getKor(), kutya1.getFajta(), kutya1.getSzin(), kutya1.getGazda());
+            Console.WriteLine("A kutya1 hangja: {0}", kutya1.hangotAd());
+
+            Macska macska1 = new Macska("Cirmos", "sziámi", "barnás");
+            macska1.setKor(2);
+            Console.WriteLine("\n\nA macska1 neve: {0}, " +
+                "\nkora {1} év \nfajtája: {2} \nszíne: {3}", macska1.getNev(), macska1.getKor(), macska1.getFajta(), macska1.getSzin());
+            Console.WriteLine("A macska1 hangja: {0}", macska1.hangotAd());
 
             Console.ReadKey();
         }
