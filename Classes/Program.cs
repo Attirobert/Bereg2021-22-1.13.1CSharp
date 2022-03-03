@@ -66,6 +66,16 @@ namespace Classes
             this.hang = "vau vau";
         }
 
+        public Kutya() : base()
+        {
+            this.gazda = "ismeretlen";
+            this.setNev("neve nincs");
+            this.setSzin("ismeretlen");
+            this.setKor(0);
+            this.setFajta("ismeretlen");
+            this.hang = "Én egy beszélő kutya vagyok. A nevem: " + this.getNev();
+        }
+
         public void setGazda(string p) { this.gazda = p; }
         public string getGazda() { return this.gazda; }
     }
@@ -76,8 +86,37 @@ namespace Classes
         {
             this.hang = "miau miau";
         }
+
+        public Macska() : base()
+        {
+            this.setNev("neve nincs");
+            this.setSzin("ismeretlen");
+            this.setKor(0);
+            this.setFajta("ismeretlen");
+            this.hang = "Én egy beszélő macska vagyok. A nevem: " + this.getNev();
+
+        }
     }
 
+    // Polimorfizmus példa
+    class Home
+    {
+        // Osztályváltozó
+        List<Allat> szobak = new List<Allat>();
+        Random r = new Random();
+
+        public Home() { }
+
+        public void allatAdd(Allat p)
+        {
+            this.szobak.Add(p);
+        }
+
+        public Allat getAllat()
+        {
+            return this.szobak[r.Next(0, this.szobak.Count)];
+        }
+    }
     class Program
     {
         static void Main(string[] args)
@@ -115,6 +154,32 @@ namespace Classes
             Console.WriteLine("\n\nA macska1 neve: {0}, " +
                 "\nkora {1} év \nfajtája: {2} \nszíne: {3}", macska1.getNev(), macska1.getKor(), macska1.getFajta(), macska1.getSzin());
             Console.WriteLine("A macska1 hangja: {0}", macska1.hangotAd());
+
+            Console.ReadKey();
+
+            // Poliformizmus példa
+            Console.WriteLine("================ Poliformizmus példa ===============");
+
+            // Példányosítjuk a Home-ot
+            Home sweetHome = new Home();
+
+            // Beköltöztetjük az állatokat
+            for (int i = 0; i < 20; i++)
+            {
+                sweetHome.allatAdd(new Kutya());
+                sweetHome.allatAdd(new Macska());
+            }
+
+            // Kihívjuk az állatokat
+            Allat a = new Allat();
+            for (int i = 0; i < 20; i++)
+            {
+                a = sweetHome.getAllat();
+                Console.WriteLine("\n {0}", a.hangotAd());
+                Console.WriteLine("Fajtám {0}: ", a.getFajta());
+                Console.WriteLine("Korom {0}: ", a.getKor());
+                Console.WriteLine("Színem {0}: ", a.getSzin());
+            }
 
             Console.ReadKey();
         }
