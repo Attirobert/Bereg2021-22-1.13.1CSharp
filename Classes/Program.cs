@@ -36,10 +36,7 @@ namespace Classes
         public int getKor(){return this.kor;}
         public void setKor(int p)
         {
-            if (p > 0 && p < 50)
-            {
-                this.kor = p;
-            }
+                if (p > 0 && p < 50) this.kor = p / 0;
         }
 
         public void setFajta(string p){this.fajta = p;}
