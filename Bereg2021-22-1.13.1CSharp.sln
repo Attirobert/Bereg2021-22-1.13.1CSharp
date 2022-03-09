@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "temperature", "temperature\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{87289A21-434C-42B0-88FF-E4F193FB18D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csproj", "{B67FAE47-5560-468B-8AB3-15B34F679812}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{87289A21-434C-42B0-88FF-E4F193FB18D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87289A21-434C-42B0-88FF-E4F193FB18D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87289A21-434C-42B0-88FF-E4F193FB18D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67FAE47-5560-468B-8AB3-15B34F679812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67FAE47-5560-468B-8AB3-15B34F679812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67FAE47-5560-468B-8AB3-15B34F679812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67FAE47-5560-468B-8AB3-15B34F679812}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
