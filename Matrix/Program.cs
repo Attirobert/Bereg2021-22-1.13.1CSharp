@@ -44,16 +44,16 @@ namespace Matrix
         }
 
         // Összeg kiírása
-        public int getOsszeg(int[] p) { return p.Sum(); }
+        public int getOsszeg() { return this.vektor.Sum(); }
 
         // Átlag kiírása
-        public double getAtlag(int[] p) { return Math.Round(p.Average(), 2); }
+        public double getAtlag() { return Math.Round(this.vektor.Average(), 2); }
 
         // Min kiírása
-        public int getMin(int[] p) { return p.Min(); }
+        public int getMin() { return this.vektor.Min(); }
 
-        // Min kiírása
-        public int getMax(int[] p) { return p.Max(); }
+        // Max kiírása
+        public int getMax() { return this.vektor.Max(); }
     }
 
 
@@ -62,7 +62,9 @@ namespace Matrix
         static void Main(string[] args)
         {
             Vektor v = new Vektor();
-            Console.WriteLine("Az elemek összege: {0}", v.getOsszeg(v.));
+            Console.WriteLine("Az elemek összege: {0}", v.getOsszeg());
+            Console.WriteLine("Az elemek átlaga: {0}", v.getAtlag());
+            Console.WriteLine("A legkisebb elem: {0} és indexe: {1}, {2}", v.getMin());
 
         }
     }
