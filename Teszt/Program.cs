@@ -8,7 +8,13 @@ namespace Teszt
 {
     class Program
     {
-        static void Main(string[] args)
+        static ulong rekurzivFakt(ulong p)
+        {
+            if (p <= 1) return 1;
+            return rekurzivFakt(p - 1) * p;
+        }
+
+        static void compSzoveg()
         {
             string a = " egyik";
             string b = "egyik ";
@@ -25,6 +31,10 @@ namespace Teszt
             {
                 Console.WriteLine("A 'b' a kisebb");
             }
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("22 faktoriálisa: {0}",rekurzivFakt(22));
             Console.ReadKey();
         }
     }
