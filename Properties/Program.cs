@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Properties
 {
+    /* Ez a példa azt mutatja be, hogy a property féle deklaráció nem úgy hozza létre a 
+     * privát háttér változót, hogy a nagy kezdőbetűt kisbetűvé alakítja.
+     */
     class Person
     {
         // Tagváltozók

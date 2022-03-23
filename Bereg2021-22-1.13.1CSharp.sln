@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KiterjesztMetodus", "Kiterj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties", "Properties\Properties.csproj", "{6EACA440-D88D-4ACC-8B58-9889BB58A7FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatTag", "StatTag\StatTag.csproj", "{D7AF7CB4-4BDC-4596-B1D8-27FC61991F65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{6EACA440-D88D-4ACC-8B58-9889BB58A7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EACA440-D88D-4ACC-8B58-9889BB58A7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EACA440-D88D-4ACC-8B58-9889BB58A7FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7AF7CB4-4BDC-4596-B1D8-27FC61991F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7AF7CB4-4BDC-4596-B1D8-27FC61991F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7AF7CB4-4BDC-4596-B1D8-27FC61991F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7AF7CB4-4BDC-4596-B1D8-27FC61991F65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
