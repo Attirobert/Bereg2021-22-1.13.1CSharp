@@ -25,9 +25,11 @@ namespace KiterjesztMetodus
         {
             string s = "ezegystring";
             Console.WriteLine("s.Print()");
-            s.Print();              // így is használhatjuk
+            s.Print();              // objektum metódusaként használva
+
             Console.WriteLine("\nStringHelper.Print(s)");
-            StringHelper.Print(s);  // így is használhatjuk
+            StringHelper.Print(s);  // statikus osztály metódusként használva
+
             Console.ReadKey();
         }
     }
