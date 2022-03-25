@@ -39,8 +39,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orai", "Orai", "{4D4FBA29-9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teszt3", "Teszt3\Teszt3.csproj", "{0BFDF464-ADB0-4EE4-9F8B-A8FB21CE1F2C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hallgatok", "Hallgatok", "{6BBDB814-2EEF-4A5D-B63E-55A5B23EB833}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
