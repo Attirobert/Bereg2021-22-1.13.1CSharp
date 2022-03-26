@@ -19,7 +19,7 @@ namespace Properties
         // Konstruktor
         public Person() {}
 
-        // Setter, getter metódusok
+        // Setter, getter metódusok a name tagváltozóhoz
         public void setName(string name) { this.name = name; }
         public string getName() { return this.name; }
     }
