@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32228.430
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello", "Hello\Hello.csproj", "{1BFBF81D-2F5B-4118-82BE-8408263FAFDB}"
 EndProject
@@ -40,6 +40,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teszt3", "Teszt3\Teszt3.csproj", "{0BFDF464-ADB0-4EE4-9F8B-A8FB21CE1F2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kivetel", "Kivetel\Kivetel.csproj", "{755A7FCA-06DB-417A-8641-8CC29C2D162A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structura", "Structura\Structura.csproj", "{E807977E-5787-43F7-BBFB-B9C8DE55E1A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,10 @@ Global
 		{755A7FCA-06DB-417A-8641-8CC29C2D162A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{755A7FCA-06DB-417A-8641-8CC29C2D162A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{755A7FCA-06DB-417A-8641-8CC29C2D162A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E807977E-5787-43F7-BBFB-B9C8DE55E1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E807977E-5787-43F7-BBFB-B9C8DE55E1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E807977E-5787-43F7-BBFB-B9C8DE55E1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E807977E-5787-43F7-BBFB-B9C8DE55E1A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
