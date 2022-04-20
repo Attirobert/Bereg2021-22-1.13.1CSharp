@@ -17,47 +17,74 @@ namespace Orokles
 
             public Allat() {
                 this.Name = "Anonim";
-                this.Hang = "Ki vagyok én?";
+                this.Hang = "Én egy Allat vagyok";
             }
 
             public Allat(string name)
             {
                 this.Name = name;
-                this.Hang = "Ki vagyok én?";
+                this.Hang = "Én egy Allat vagyok";
             }
 
-            public string hangotAd()
+            public void hangotAd()
             {
-                return Hang;
+                Console.WriteLine("Ezt a Allat.hangotAd() metódus írta ki.");
+                Console.ReadKey();
             }
 
             // Virtuális metódus
             public virtual void mozog()
             {
-                Console.WriteLine("Ezt a lezárt metódus írta ki.");
+                Console.WriteLine("Ezt a virtuális mozog() metódus írta ki.");
+                Console.ReadKey();
             }
 
         }
 
-        // Virtuális metódusok
+        // ok
         class Kutya : Allat
         {
-            // Lezárt metódus
-            public sealed override void mozog()
-            {
-                Console.WriteLine("Ezt a lezárt metódus írta ki.");
+            public Kutya() : base(){
+                this.Hang = "Én egy kutya vagyok";
+                Console.ReadKey();
             }
 
+            // Átlagos metódus felülírása (shadow hatás)
+            public void hangotAd()
+            {
+                Console.WriteLine("Ezt a Kutya.hangotAd() metódus írta ki.");
+                Console.ReadKey();
+            }
 
+            // Felül írt virtuális metódus lezárással
+            public sealed override void mozog()
+            {
+                Console.WriteLine("Ezt a lezárt mozog() metódus írta ki.");
+                Console.ReadKey();
+            }
         }
 
-        // Átlagos metódus felülírása (shadow hatás)
-
-        // Virtuális metódus felülírása
-
-        // Metódus lezárása
+        class Komondor : Kutya
+        {
+            public Komondor() : base(){
+                this.Name = "Komondor";
+            }
+        }
 
         // Osztály lezárása
+        sealed class Macska : Allat
+        {
+            public Macska()
+            {
+                this.Name = "Cicamica";
+            }
+        }
+
+/* Lezárt osztályból nem származtatható
+        class Sziami : Macska
+        {
+
+        }*/
 
 
         static void Main(string[] args)
