@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructPelda", "StructPelda\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orokles", "Orokles\Orokles.csproj", "{AB59BE22-EC98-410B-9E63-8C68EE94E127}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homerseklet", "H:\SzatmariDorian-master\Homerseklet\Homerseklet.csproj", "{3E4A424A-5ACC-4CD9-90C9-FA0B2D7F3310}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,10 @@ Global
 		{AB59BE22-EC98-410B-9E63-8C68EE94E127}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB59BE22-EC98-410B-9E63-8C68EE94E127}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB59BE22-EC98-410B-9E63-8C68EE94E127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E4A424A-5ACC-4CD9-90C9-FA0B2D7F3310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E4A424A-5ACC-4CD9-90C9-FA0B2D7F3310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E4A424A-5ACC-4CD9-90C9-FA0B2D7F3310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E4A424A-5ACC-4CD9-90C9-FA0B2D7F3310}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
