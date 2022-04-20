@@ -10,6 +10,10 @@ namespace StructPelda
     {
         struct Point
         {
+            /*
+             * property-k használatát bemutatni {get; set;} 
+             */
+
             int x;
             public int X
             {
