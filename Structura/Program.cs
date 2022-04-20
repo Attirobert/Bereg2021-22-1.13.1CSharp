@@ -32,6 +32,12 @@ namespace Structura
     {
         static void Main(string[] args)
         {
+            // new nélkül
+            Test s;
+            s.x = 3;
+            Console.WriteLine(s.x); // x == 0
+            Console.ReadKey();
+
             Test t = new Test();
             Console.WriteLine(t.x); // x == 0
             Console.ReadKey();
