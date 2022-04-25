@@ -17,7 +17,7 @@ namespace StatTag
             ++Animal.AnimalCounter;
         }
 
-        // Destruktor; a számlálót csökkentjük, amikor létre hozunk egy új objektumot
+        // Destruktor; a számlálót csökkentjük, amikor törlünk egy új objektumot
         ~Animal()
         {
             --Animal.AnimalCounter;
