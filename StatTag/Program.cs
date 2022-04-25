@@ -35,18 +35,16 @@ namespace StatTag
 
             for (int i = 0; i < szam; i++)
             {
-/*                if (Convert.ToBoolean(rnd.Next(0, 1)))
+                if (Convert.ToBoolean(rnd.Next(0, 1)))
                 {
-*/                    lst.Add(new Animal());
-/*                }
-                else if (Animal.AnimalCounter > 0)
-                {
-                    lst[0] = null;
+                    lst.Add(new Animal());
                 }
-*/            }
+                else if (lst.Count > 0)
+                {
+                    lst.Remove(lst[0]);
+                }
+            }
 
-            lst.Remove(lst[0]);
-            
             Console.WriteLine("Várjunk egy kicsit, hogy a takarítás megtörténjen");
             Console.ReadKey();
             Console.WriteLine("Lista elemeinek száma: {0}", lst.Count);
