@@ -17,8 +17,8 @@ namespace StatTag
             ++Animal.AnimalCounter;
         }
 
-        // Destruktor; a számlálót csökkentjük, amikor törlünk egy új objektumot
-        ~Animal()
+        // Destruktor nem hívható, ezért a számlálót csökkentjük, amikor törlünk egy új objektumot
+        public void RemAnimal()
         {
             --Animal.AnimalCounter;
         }
@@ -29,24 +29,29 @@ namespace StatTag
         {
             Random rnd = new Random();
             List<Animal> lst = new List<Animal>();
-            bool uj = true;
+            int novel = 0,
+                csokkent = 0;
 
+            Console.WriteLine("Adjon meg egy természetes számot!");
             int szam = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 0; i < szam; i++)
             {
-                if (Convert.ToBoolean(rnd.Next(0, 1)))
+                if (rnd.Next(1, 100) % 2 == 0)
                 {
                     lst.Add(new Animal());
+                    novel++;
                 }
                 else if (lst.Count > 0)
                 {
+                    lst[0].RemAnimal(); 
                     lst.Remove(lst[0]);
+                    csokkent++;
                 }
             }
 
-            Console.WriteLine("Várjunk egy kicsit, hogy a takarítás megtörténjen");
-            Console.ReadKey();
+            Console.WriteLine("Növelte a listát: {0} db", novel);
+            Console.WriteLine("Csökkentette a listát: {0} db", csokkent);
             Console.WriteLine("Lista elemeinek száma: {0}", lst.Count);
             Console.WriteLine("Objektumok száma: {0}", Animal.AnimalCounter);
             Console.ReadKey();
