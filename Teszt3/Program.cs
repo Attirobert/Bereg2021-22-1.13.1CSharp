@@ -10,6 +10,9 @@ namespace Teszt3
     {
         static void Main(string[] args)
         {
+            int[,,] tomb;
+            tomb = new int[2, 2, 2];
+
         }
     }
 }
