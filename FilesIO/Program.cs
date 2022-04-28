@@ -111,11 +111,17 @@ namespace FilesIO
             StreamReader sr = f.getFile();
 
             // Dolgozunk a fájllal
-            string s = sr.ReadLine(); 
-            while (s != null) 
-            { 
-                Console.WriteLine(s); 
-                s = sr.ReadLine(); 
+            // Egészet kiolvassa
+            string s = sr.ReadToEnd();
+            Console.WriteLine(s);
+
+            Console.WriteLine();
+            // Soronként olvas
+            s = sr.ReadLine();
+            while (s != null)
+            {
+                Console.WriteLine(s);
+                s = sr.ReadLine();
             }
 
             Console.ReadKey();
