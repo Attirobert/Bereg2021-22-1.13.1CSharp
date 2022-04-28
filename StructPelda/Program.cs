@@ -13,13 +13,16 @@ namespace StructPelda
             /*
              * property-k használatát bemutatni {get; set;} 
              */
-
+            // Osztály változó
             int x;
+
+            // Properties
             public int X
             {
                 get { return x; }
                 set { x = value; }
             }
+
             int y;
             public int Y
             {
@@ -32,6 +35,7 @@ namespace StructPelda
                 this.y = y;
             }
         }
+
         struct Line
         {
             Point a;
