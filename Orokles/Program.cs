@@ -8,6 +8,22 @@ namespace Orokles
 {
     class Program
     {
+        abstract class Ordog : IComparable
+        {
+            private int x;
+
+            public Ordog() {
+                this.x = 10;
+            }
+
+            public int CompareTo(object obj)
+            {
+                throw new NotImplementedException();
+            }
+
+            abstract public void ugrik();
+
+        }
         // Átlagos osztály
         class Allat
         {
@@ -38,7 +54,6 @@ namespace Orokles
                 Console.WriteLine("Ezt a virtuális mozog() metódus írta ki.");
                 Console.ReadKey();
             }
-
         }
 
         // ok
@@ -69,6 +84,11 @@ namespace Orokles
             public Komondor() : base(){
                 this.Name = "Komondor";
             }
+
+            public override void mozog()
+            {
+                Console.WriteLine("Elindultam");
+            }
         }
 
         // Osztály lezárása
@@ -80,7 +100,7 @@ namespace Orokles
             }
         }
 
-/* Lezárt osztályból nem származtatható
+        /*//Lezárt osztályból nem származtatható
         class Sziami : Macska
         {
 

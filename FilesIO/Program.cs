@@ -18,9 +18,9 @@ namespace FilesIO
 
 
         public FilesIO() {
-            setFileName();
-            setFileMode(); 
-            setFileAccess();
+            setFileName();  // Fájl nevének bekérése
+            setFileMode();  // Megnyitás módjának bekérése
+            setFileAccess();    // Hozzáférés módjának beállítása
         }
 
         private void setFileName()
@@ -111,11 +111,17 @@ namespace FilesIO
             StreamReader sr = f.getFile();
 
             // Dolgozunk a fájllal
-            string s = sr.ReadLine(); 
-            while (s != null) 
-            { 
-                Console.WriteLine(s); 
-                s = sr.ReadLine(); 
+            // Egészet kiolvassa
+            string s = sr.ReadToEnd();
+            Console.WriteLine(s);
+
+            Console.WriteLine();
+            // Soronként olvas
+            s = sr.ReadLine();
+            while (s != null)
+            {
+                Console.WriteLine(s);
+                s = sr.ReadLine();
             }
 
             Console.ReadKey();
