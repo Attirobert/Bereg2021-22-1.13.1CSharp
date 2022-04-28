@@ -18,9 +18,9 @@ namespace FilesIO
 
 
         public FilesIO() {
-            setFileName();
-            setFileMode(); 
-            setFileAccess();
+            setFileName();  // Fájl nevének bekérése
+            setFileMode();  // Megnyitás módjának bekérése
+            setFileAccess();    // Hozzáférés módjának beállítása
         }
 
         private void setFileName()
