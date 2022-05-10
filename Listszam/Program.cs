@@ -25,14 +25,58 @@ namespace Listszam
         }
         public void setHatar()
         {
-            string 
-        }
+            bool tovabb = false;
+            do
+            {
+                try
+                {
+                    tovabb = false;
+                    Console.WriteLine("Adja meg a lista hosszát!");
+                    listhossz = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    tovabb = true;
+                }
 
+            } while (tovabb);
+
+        }
+        public void setTort()
+        {
+
+            bool tovabb = false;
+            do
+            {
+                try
+                {
+
+                    tovabb = false;
+                    Console.WriteLine("Adja meg a lista lista elemét!");
+                    string beolvasS = Console.ReadLine();
+                    double beolvas = Convert.ToDouble(beolvasS);
+                    lista.Append(beolvas);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+
+                    tovabb = true;
+                    throw;
+                }
+
+            } while (tovabb);
+
+        }
     }
     class Program
     {
         static void Main(string[] args)
         {
+            ListSzam listSzam = new ListSzam();
+            listSzam.setTort();
+            Console.ReadKey();
         }
     }
 }
