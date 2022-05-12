@@ -45,7 +45,8 @@ namespace Listszam
         }
         public void setTort()
         {
-
+            string beolvasS = "";
+            double beolvas;
             bool tovabb = false;
             do
             {
@@ -53,21 +54,58 @@ namespace Listszam
                 {
 
                     tovabb = false;
-                    Console.WriteLine("Adja meg a lista lista elemét!");
-                    string beolvasS = Console.ReadLine();
-                    double beolvas = Convert.ToDouble(beolvasS);
-                    lista.Append(beolvas);
+                    Console.WriteLine("Adja meg a lista elemét!");
+                    beolvasS = Console.ReadLine();
+                    beolvas = Convert.ToDouble(beolvasS);
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
 
+                    beolvas = Convert.ToDouble(beolvasS.Replace('.', ','));
+
+                    if (beolvasS.Contains("/"))
+                    {
+                        int perjel = beolvasS.IndexOf("/");
+                        int szamlalo = Convert.ToInt32(beolvasS.Substring(0, perjel));
+                        int nevezo = Convert.ToInt32(beolvasS.Substring(perjel, beolvasS.Length - perjel));
+
+                        beolvas = szamlalo / nevezo;
+                    }
+
                     tovabb = true;
-                    throw;
                 }
+                lista.Add(beolvas);
+            } while (listhossz > lista.Count());
 
-            } while (tovabb);
+        }
 
+        public void getLista()
+        {
+            foreach (var item in lista)
+            {
+                Console.Write("{0}, ", item);
+            }
+        }
+
+        public void getAtlag() {
+            double atlag = 0;
+
+            atlag = getOsszeg() / lista.Count();
+
+            Console.WriteLine("Az átlag: {0}", atlag);
+        }
+
+        public double getOsszeg()
+        {
+            double osszeg = 0;
+
+            foreach (var item in lista)
+            {
+                osszeg += item;
+            }
+
+            return osszeg;
         }
     }
     class Program
@@ -75,7 +113,13 @@ namespace Listszam
         static void Main(string[] args)
         {
             ListSzam listSzam = new ListSzam();
+            listSzam.setHatar();
             listSzam.setTort();
+            listSzam.getLista();
+            listSzam.getAtlag();
+
+            Console.WriteLine("Az összeg: {0}", listSzam.getOsszeg());
+
             Console.ReadKey();
         }
     }
