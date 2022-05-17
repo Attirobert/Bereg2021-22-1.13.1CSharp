@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello", "Hello\Hello.csproj", "{1BFBF81D-2F5B-4118-82BE-8408263FAFDB}"
 EndProject
@@ -106,6 +106,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Henger", "Henger\Henger.csproj", "{EA544A16-3317-486D-9EFC-60FEB3428CCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HengerTest", "HengerTest\HengerTest.csproj", "{9EF88279-CDA3-487E-8710-633B5216681A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "18.Rekordok-Listák", "18.Rekordok-Listák", "{2B7D6751-B489-40E2-ACDE-E6B1BFBBF833}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beolvas_18_1", "Beolvas_18_1\Beolvas_18_1.csproj", "{4E7063C4-508D-47FD-B20F-0978C16C9101}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -301,6 +305,10 @@ Global
 		{9EF88279-CDA3-487E-8710-633B5216681A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EF88279-CDA3-487E-8710-633B5216681A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EF88279-CDA3-487E-8710-633B5216681A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E7063C4-508D-47FD-B20F-0978C16C9101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E7063C4-508D-47FD-B20F-0978C16C9101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E7063C4-508D-47FD-B20F-0978C16C9101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E7063C4-508D-47FD-B20F-0978C16C9101}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -348,6 +356,8 @@ Global
 		{969DEF1D-8643-4D0F-A86D-F6CFA7B03EEB} = {10CD6C3C-9448-49FE-B72F-BBFDE53F3032}
 		{970D7821-ACEC-4646-9BF7-205722605DD1} = {10CD6C3C-9448-49FE-B72F-BBFDE53F3032}
 		{EA544A16-3317-486D-9EFC-60FEB3428CCF} = {AC598F3E-FC84-4D82-878C-8526BF946D64}
+		{2B7D6751-B489-40E2-ACDE-E6B1BFBBF833} = {103A06C2-2617-4979-B92E-1453240040F8}
+		{4E7063C4-508D-47FD-B20F-0978C16C9101} = {2B7D6751-B489-40E2-ACDE-E6B1BFBBF833}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1DB2960-916E-45E9-A714-A68F0632CBA3}
