@@ -85,10 +85,10 @@ namespace Orokles
                 this.Name = "Komondor";
             }
 
-            public override void mozog()
-            {
-                Console.WriteLine("Elindultam");
-            }
+            //public override void mozog()
+            //{
+            //    Console.WriteLine("Elindultam");
+            //}
         }
 
         // Osztály lezárása

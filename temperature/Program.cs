@@ -30,11 +30,12 @@ namespace temperature
 
             for (int i = 0; i < honapokszama; i++)
             {
-                if () // Legmelegebb és leghidegebb nap keresése
-                {
+                //if () // Legmelegebb és leghidegebb nap keresése
+                //{
 
-                }
+                //}
             }
-            
+
+        }
     }
 }
