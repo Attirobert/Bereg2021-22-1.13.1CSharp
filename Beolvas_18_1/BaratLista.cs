@@ -60,7 +60,6 @@ namespace Beolvas_18_1
             
             // Beolvasás fájlból
             using (StreamReader sr = new StreamReader(fajlNev, Encoding.Default))
-            //StreamReader sr = new StreamReader(fajlNev, Encoding.Default);
             while (sr.EndOfStream == false)
             {
                 sor = sr.ReadLine();
