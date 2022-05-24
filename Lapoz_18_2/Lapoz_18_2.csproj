@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4E7063C4-508D-47FD-B20F-0978C16C9101}</ProjectGuid>
+    <ProjectGuid>{0FAA5275-0413-4E60-82D2-FB72D95D1846}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Beolvas_18_1</RootNamespace>
-    <AssemblyName>Beolvas_18_1</AssemblyName>
+    <RootNamespace>Lapoz_18_2</RootNamespace>
+    <AssemblyName>Lapoz_18_2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaratLista.cs" />
-    <Compile Include="BeolvasMain.cs" />
+    <Compile Include="LapozLista.cs" />
+    <Compile Include="LapozMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Beolvas_18_1\Beolvas_18_1.csproj">
+      <Project>{4e7063c4-508d-47fd-b20f-0978c16c9101}</Project>
+      <Name>Beolvas_18_1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

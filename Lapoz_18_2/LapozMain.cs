@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Beolvas_18_1;
 
-namespace Beolvas_18_1
+
+namespace Lapoz_18_2
 {
-    internal class Program
+    class LapozMain
     {
         static void Main(string[] args)
         {

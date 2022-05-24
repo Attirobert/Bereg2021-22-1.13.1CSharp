@@ -15,7 +15,7 @@ Kiir: A beolvasott adatokat jelenítse meg táblázatos formában, soronként vi
  */
 namespace Beolvas_18_1
 {
-    internal class BaratLista
+    public class BaratLista
     {
         private class Barat
         {
