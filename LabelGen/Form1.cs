@@ -41,7 +41,7 @@ namespace LabelGen
 
             if (randomszam > max) max = randomszam;
 
-            double atlag = osszeg / db;
+            double atlag = (double)osszeg / db;
 
             label1.Text = String.Format("A számok összege {0}, a kattintások száma: {1}, az átlaguk: {2}, a minimum érték: {3}, a maximum érték: {4}.", osszeg, db, atlag, min, max);
         }
