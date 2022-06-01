@@ -59,10 +59,33 @@ namespace Halmaz
             throw new NotImplementedException();
         }
 
-        private void Halmazgen(ListBox lbxB, NumericUpDown nudB)
+        private void Halmazgen(ListBox lbx, NumericUpDown nud)
         {
             Random rnd = new Random();
-            
+            int elem;
+            bool azonos = false;
+            //halmaz elemeinek törlése
+            lbx.Items.Clear();
+            for (int i = 0; i < nud.Value; i++)
+            {
+                azonos = false;
+                //ellenőrizzük hogy van -e már ilyen elem
+                elem = rnd.Next(1, 100);
+                for (int j = 0; j < lbx.Items.Count; j++)
+                {
+                    if (lbx.Items[i].Equals(elem))
+                    {
+                        azonos = true;
+                        break;
+                    }
+                }
+                if (!azonos)
+                {
+                    lbx.Items.Add(elem);
+                }
+               
+            }
+
            
         }
     }
