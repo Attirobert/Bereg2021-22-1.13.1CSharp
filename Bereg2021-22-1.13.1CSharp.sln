@@ -121,6 +121,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabelSzoveg", "LabelSzoveg\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormMozg", "FormMozg\FormMozg.csproj", "{DFA23F8C-D32C-4849-9C2C-A2D3AC46A6AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabelGen", "LabelGen\LabelGen.csproj", "{6DE0BAAE-9B68-46F2-BD50-9DD16A330AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -335,6 +337,10 @@ Global
 		{DFA23F8C-D32C-4849-9C2C-A2D3AC46A6AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFA23F8C-D32C-4849-9C2C-A2D3AC46A6AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFA23F8C-D32C-4849-9C2C-A2D3AC46A6AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE0BAAE-9B68-46F2-BD50-9DD16A330AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE0BAAE-9B68-46F2-BD50-9DD16A330AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE0BAAE-9B68-46F2-BD50-9DD16A330AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE0BAAE-9B68-46F2-BD50-9DD16A330AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -389,6 +395,7 @@ Global
 		{7CB1848E-8F9B-456C-9C0C-45C70886F9F7} = {CFD4CEC0-5CB5-44D0-94D9-203866685E0A}
 		{E2C53794-5851-4931-8971-A14C5E103749} = {CFD4CEC0-5CB5-44D0-94D9-203866685E0A}
 		{DFA23F8C-D32C-4849-9C2C-A2D3AC46A6AD} = {CFD4CEC0-5CB5-44D0-94D9-203866685E0A}
+		{6DE0BAAE-9B68-46F2-BD50-9DD16A330AD1} = {4D4FBA29-9D0D-4394-987F-F3A10B7CD39E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1DB2960-916E-45E9-A714-A68F0632CBA3}
