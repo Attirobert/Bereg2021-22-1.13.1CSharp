@@ -56,7 +56,13 @@ namespace Halmaz
 
         private void Metszet(ListBox lbxAmB, ListBox lbxA, ListBox lbxB)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < lbxA.Items.Count; i++)
+            {
+                for (int j = 0; j < lbxB.Items.Count; j++)
+                {
+                    if (lbxB.Items[i] == )
+                }
+            }
         }
 
         private void Halmazgen(ListBox lbx, NumericUpDown nud)
@@ -73,7 +79,7 @@ namespace Halmaz
                 elem = rnd.Next(1, 100);
                 for (int j = 0; j < lbx.Items.Count; j++)
                 {
-                    if (lbx.Items[i].Equals(elem))
+                    if (lbx.Items[j].Equals(elem))
                     {
                         azonos = true;
                         break;
@@ -88,5 +94,8 @@ namespace Halmaz
 
            
         }
+
+        
+
     }
 }
