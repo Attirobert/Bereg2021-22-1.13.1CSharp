@@ -45,6 +45,12 @@ namespace Halmaz
             this.nudA = new System.Windows.Forms.NumericUpDown();
             this.nudB = new System.Windows.Forms.NumericUpDown();
             this.btnOk = new System.Windows.Forms.Button();
+            this.lblAdb = new System.Windows.Forms.Label();
+            this.lblBdb = new System.Windows.Forms.Label();
+            this.lblAuBdb = new System.Windows.Forms.Label();
+            this.lblAmBdb = new System.Windows.Forms.Label();
+            this.lblAbolBdb = new System.Windows.Forms.Label();
+            this.lblBbolAdb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudB)).BeginInit();
             this.SuspendLayout();
@@ -204,11 +210,71 @@ namespace Halmaz
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // lblAdb
+            // 
+            this.lblAdb.AutoSize = true;
+            this.lblAdb.Location = new System.Drawing.Point(43, 356);
+            this.lblAdb.Name = "lblAdb";
+            this.lblAdb.Size = new System.Drawing.Size(61, 13);
+            this.lblAdb.TabIndex = 5;
+            this.lblAdb.Text = "Tételszám: ";
+            // 
+            // lblBdb
+            // 
+            this.lblBdb.AutoSize = true;
+            this.lblBdb.Location = new System.Drawing.Point(165, 356);
+            this.lblBdb.Name = "lblBdb";
+            this.lblBdb.Size = new System.Drawing.Size(61, 13);
+            this.lblBdb.TabIndex = 5;
+            this.lblBdb.Text = "Tételszám: ";
+            // 
+            // lblAuBdb
+            // 
+            this.lblAuBdb.AutoSize = true;
+            this.lblAuBdb.Location = new System.Drawing.Point(287, 356);
+            this.lblAuBdb.Name = "lblAuBdb";
+            this.lblAuBdb.Size = new System.Drawing.Size(61, 13);
+            this.lblAuBdb.TabIndex = 5;
+            this.lblAuBdb.Text = "Tételszám: ";
+            // 
+            // lblAmBdb
+            // 
+            this.lblAmBdb.AutoSize = true;
+            this.lblAmBdb.Location = new System.Drawing.Point(409, 356);
+            this.lblAmBdb.Name = "lblAmBdb";
+            this.lblAmBdb.Size = new System.Drawing.Size(61, 13);
+            this.lblAmBdb.TabIndex = 5;
+            this.lblAmBdb.Text = "Tételszám: ";
+            // 
+            // lblAbolBdb
+            // 
+            this.lblAbolBdb.AutoSize = true;
+            this.lblAbolBdb.Location = new System.Drawing.Point(531, 356);
+            this.lblAbolBdb.Name = "lblAbolBdb";
+            this.lblAbolBdb.Size = new System.Drawing.Size(61, 13);
+            this.lblAbolBdb.TabIndex = 5;
+            this.lblAbolBdb.Text = "Tételszám: ";
+            // 
+            // lblBbolAdb
+            // 
+            this.lblBbolAdb.AutoSize = true;
+            this.lblBbolAdb.Location = new System.Drawing.Point(653, 356);
+            this.lblBbolAdb.Name = "lblBbolAdb";
+            this.lblBbolAdb.Size = new System.Drawing.Size(61, 13);
+            this.lblBbolAdb.TabIndex = 5;
+            this.lblBbolAdb.Text = "Tételszám: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblBbolAdb);
+            this.Controls.Add(this.lblAbolBdb);
+            this.Controls.Add(this.lblAmBdb);
+            this.Controls.Add(this.lblAuBdb);
+            this.Controls.Add(this.lblBdb);
+            this.Controls.Add(this.lblAdb);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.nudB);
             this.Controls.Add(this.nudA);
@@ -226,7 +292,7 @@ namespace Halmaz
             this.Controls.Add(this.lbxB);
             this.Controls.Add(this.lbxA);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Halmazműveletek";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudB)).EndInit();
@@ -253,6 +319,12 @@ namespace Halmaz
         private System.Windows.Forms.NumericUpDown nudA;
         private System.Windows.Forms.NumericUpDown nudB;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Label lblAdb;
+        private System.Windows.Forms.Label lblBdb;
+        private System.Windows.Forms.Label lblAuBdb;
+        private System.Windows.Forms.Label lblAmBdb;
+        private System.Windows.Forms.Label lblAbolBdb;
+        private System.Windows.Forms.Label lblBbolAdb;
     }
 }
 

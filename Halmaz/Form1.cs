@@ -12,6 +12,8 @@ namespace Halmaz
 {
     public partial class Form1 : Form
     {
+        Random rnd = new Random();
+
         public Form1()
         {
             InitializeComponent();
@@ -27,75 +29,106 @@ namespace Halmaz
            
             //A halmaz generálása
             Halmazgen(lbxA, nudA);
+            lblAdb.Text = lbxA.Items.Count.ToString();
             //B halmaz generálása
             Halmazgen(lbxB, nudB);
+            lblBdb.Text = lbxB.Items.Count.ToString();
             //Metszet
             Metszet(lbxAmB, lbxA, lbxB);
+            lblAmBdb.Text = lbxAmB.Items.Count.ToString();
             //Unió
             Unio(lbxAuB, lbxA, lbxB);
+            lblAuBdb.Text = lbxAuB.Items.Count.ToString();
             //A-B
             AbolB(lbxAbolB, lbxA, lbxB);
+            lblAbolBdb.Text = lbxAbolB.Items.Count.ToString();
             //B-A
-            BbolA(lbxBbolA, lbxA, lbxB);
+            AbolB(lbxBbolA, lbxB, lbxA);
+            lblBbolAdb.Text = lbxBbolA.Items.Count.ToString();
         }
 
-        private void BbolA(ListBox lbxBbolA, ListBox lbxA, ListBox lbxB)
+        private bool Bennevan(ListBox miben, object mi)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < miben.Items.Count; i++)
+            {
+                if (miben.Items[i].Equals(mi))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void AbolB(ListBox lbxAbolB, ListBox lbxA, ListBox lbxB)
         {
-            throw new NotImplementedException();
+            lbxAbolB.Items.Clear();
+            for (int i = 0; i < lbxA.Items.Count; i++)
+            {
+                if (!Bennevan(lbxB, lbxA.Items[i]))
+                {
+                    lbxAbolB.Items.Add(lbxA.Items[i]);
+                    continue;
+                }
+            }
         }
 
         private void Unio(ListBox lbxAuB, ListBox lbxA, ListBox lbxB)
         {
-            throw new NotImplementedException();
+            lbxAuB.Items.Clear();
+            for (int i = 0; i < lbxA.Items.Count; i++)
+            {
+                lbxAuB.Items.Add(lbxA.Items[i]);
+            }
+
+            for (int i = 0; i < lbxB.Items.Count; i++)
+            {
+                if (Bennevan(lbxB, lbxAuB.Items[i]))
+                {
+                    lbxAuB.Items.Add(lbxB.Items[i]);
+                    break;
+                }
+                
+            }
         }
 
         private void Metszet(ListBox lbxAmB, ListBox lbxA, ListBox lbxB)
         {
+            bool empty = true;
+            lbxAmB.Items.Clear();
             for (int i = 0; i < lbxA.Items.Count; i++)
             {
-                for (int j = 0; j < lbxB.Items.Count; j++)
+                if (Bennevan(lbxB, lbxA.Items[i]))
                 {
-                    if (lbxB.Items[i] == )
+                    lbxAmB.Items.Add(lbxB.Items[i]);
+                    empty = false;
                 }
+            }
+            if (empty)
+            {
+                lbxAmB.Items.Add("Üres halmaz");
             }
         }
 
         private void Halmazgen(ListBox lbx, NumericUpDown nud)
         {
-            Random rnd = new Random();
             int elem;
-            bool azonos = false;
             //halmaz elemeinek törlése
             lbx.Items.Clear();
-            for (int i = 0; i < nud.Value; i++)
+            int i = 0;
+            do
             {
-                azonos = false;
                 //ellenőrizzük hogy van -e már ilyen elem
                 elem = rnd.Next(1, 100);
-                for (int j = 0; j < lbx.Items.Count; j++)
-                {
-                    if (lbx.Items[j].Equals(elem))
-                    {
-                        azonos = true;
-                        break;
-                    }
-                }
-                if (!azonos)
+                if (!Bennevan(lbx, elem))
                 {
                     lbx.Items.Add(elem);
+                    i++;
                 }
-               
-            }
+                
+            } while (i != nud.Value);
 
            
         }
-
-        
 
     }
 }
