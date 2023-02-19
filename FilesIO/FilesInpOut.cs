@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FilesIO
 {
-    class FilesIO
+    class FilesInpOut
     {
         // Osztályváltozók
         private string fileName;
@@ -17,7 +17,7 @@ namespace FilesIO
         private StreamReader sr;
 
 
-        public FilesIO() {
+        public FilesInpOut() {
             setFileName();  // Fájl nevének bekérése
             setFileMode();  // Megnyitás módjának bekérése
             setFileAccess();    // Hozzáférés módjának beállítása
@@ -103,11 +103,11 @@ namespace FilesIO
         }
 
     }
-    internal class Program
+    internal class FilesIO
     {
         static void Main(string[] args)
         {
-            FilesIO f = new FilesIO();
+            FilesInpOut f = new FilesInpOut();
             StreamReader sr = f.getFile();
 
             // Dolgozunk a fájllal
@@ -117,8 +117,8 @@ namespace FilesIO
 
             Console.WriteLine();
             // Soronként olvas
-            s = sr.ReadLine();
-            while (s != null)
+            //s = sr.ReadLine();
+            while (!sr.EndOfStream) // s != null
             {
                 Console.WriteLine(s);
                 s = sr.ReadLine();

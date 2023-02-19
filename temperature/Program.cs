@@ -18,8 +18,6 @@ namespace temperature
             int[,] homersekletmatrix = new int[honapokszama, napokszama];
             Random rnd = new Random();
 
-            int homerseklet;
-
             for (int i = 0; i < honapokszama; i++) // Mátrix feltöltése
             {
                 for (int j = 0; j < napokszama; j++)
@@ -28,14 +26,20 @@ namespace temperature
                 }
             }
 
+            alsoHom = 0;
+            felsoHom= 0;
             for (int i = 0; i < honapokszama; i++)
             {
-                //if () // Legmelegebb és leghidegebb nap keresése
-                //{
-
-                //}
+                for (int j = 0; j < napokszama; j++)
+                {
+                    if (homersekletmatrix[i, j] < alsoHom) alsoHom = homersekletmatrix[i, j]; // Leghidegebb nap keresése
+                    else if (homersekletmatrix[i, j] > felsoHom) felsoHom = homersekletmatrix[i, j]; // Legmelegebb és leghidegebb nap keresése
+                }
             }
 
+            Console.WriteLine("Az év legalacsonyabb hőmérséklete {0} Celsius fok volt", alsoHom);
+            Console.WriteLine("Az év legmagasabb hőmérséklete {0} Celsius fok volt", felsoHom);
+            Console.ReadKey();
         }
     }
 }
